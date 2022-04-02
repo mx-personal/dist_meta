@@ -12,7 +12,7 @@ def get_internal_info(distribution: str) -> {}:
     entry_points = [{'name': ep.name, 'path': r'{0}\Scripts\{1}'.format(sys.prefix, ep.name)} for ep in eps_console]
     pkgs = [pkg for pkg, dists in imp_md.packages_distributions().items() if safe_name(distribution) in dists] # packages names
     libraries = [{'name': pkg, 'path': str(dist.locate_file(pkg))} for pkg in pkgs]
-    requirements = [{"requirements":r'{0}\requirements.txt'.format(lib['path'])} for lib in libraries if exists(r'{0}\requirements.txt'.format(lib['path']))]
+    requirements = [{'name': 'req-{0}'.format(lib['name']), 'path':r'{0}\requirements.txt'.format(lib['path'])} for lib in libraries if exists(r'{0}\requirements.txt'.format(lib['path']))]
 
     return {
         "environment": {'name': sys.prefix.split("\\")[-1], 'path': sys.prefix},
