@@ -11,5 +11,5 @@ setup(
         'importlib-metadata',
         'pyyaml',
     ],
-    entry_points={'console_scripts': ["gen_dist_info=dist_meta:dump_internal_info_venv"]}
+    entry_points={'console_scripts': ["gen_dist_info=dist_meta.scripts:gen_distinfo_cmd"]}
 )
