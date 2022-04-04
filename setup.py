@@ -1,15 +1,15 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="ygg_helpers",
+    name="dist_meta",
     packages=find_packages(),
-    version='0.0',
+    version='1.0-alpha',
     author='mx',
-    url="https://github.com/mx-personal/ygg_helpers.git",
+    url="https://github.com/mx-personal/dist_meta.git",
     keywords=['yggdrasil', 'app', 'virtual', 'environment'],
     install_requires=[
         'importlib-metadata',
         'pyyaml',
     ],
-    entry_points={'console_scripts': ["gen_dist_info=ygg_helpers:dump_internal_info_venv"]}
+    entry_points={'console_scripts': ["gen_dist_info=dist_meta.scripts:gen_distinfo_cmd"]}
 )
