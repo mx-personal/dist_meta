@@ -3,10 +3,10 @@ from setuptools import setup, find_packages
 setup(
     name="dist_meta",
     packages=find_packages(),
-    version='1.0-alpha',
+    version='1.0.0',
     author='mx',
     url="https://github.com/mx-personal/dist_meta.git",
-    keywords=['yggdrasil', 'app', 'virtual', 'environment'],
+    keywords=['distribution', 'virtual environment', 'metadata'],
     install_requires=[
         'importlib-metadata',
         'pyyaml',
