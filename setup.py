@@ -1,15 +1,16 @@
 from setuptools import setup, find_packages
-
+from pathlib import Path
+long_description = (Path(__file__).parent / "README.md").read_text()
 setup(
-    name="dist_meta",
+    name="ud-dist-meta",
     packages=find_packages(),
-    version='1.0.1',
+    version='1.0.2',
     description='Library to extract information from packages installed in current python environment',
     author='Umbriel Draken',
-    long_description='README',
+    long_description=long_description,
     long_description_content_type='text/markdown',
     author_email='umbriel.draken@gmail.com',
-    url='https://github.com/um-en/yggdrasil',
+    url='https://github.com/um-en/ud-dist-meta',
     license='MIT',
     classifiers=[
         'License :: OSI Approved :: MIT License',
