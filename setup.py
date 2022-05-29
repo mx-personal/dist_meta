@@ -4,7 +4,7 @@ long_description = (Path(__file__).parent / "README.md").read_text()
 setup(
     name="ud-dist-meta",
     packages=find_packages(),
-    version='1.0.2',
+    version='1.0.3',
     description='Library to extract information from packages installed in current python environment',
     author='Umbriel Draken',
     long_description=long_description,
